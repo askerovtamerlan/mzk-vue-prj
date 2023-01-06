@@ -503,6 +503,9 @@ export default {
     align-items: flex-start
     position: relative
     margin-top: 30px
+    +xs()
+      flex-direction: column
+      padding: 10px 20px 15px 20px
 
     &-date
       font-weight: 700
@@ -513,6 +516,13 @@ export default {
       font-size: 16px
       line-height: 19px
       letter-spacing: $letter-spacing
+      +xs()
+        font-size: 10px
+        line-height: 12px
+        position: static
+        left: 0 
+        right: 0
+        align-self: flex-end
 
 
     &-avatar
@@ -520,10 +530,14 @@ export default {
       height: 100px
       object-fit: cover
       border-radius: 10px
+      +xs()
+        display: none
 
 
     &-col
       margin-left: 30px
+      +xs()
+        margin-left: 0
 
 
     &-name
@@ -531,6 +545,8 @@ export default {
       font-size: 20px
       line-height: 24px
       letter-spacing: $letter-spacing
+      +xs()
+        font-size: 16px
 
 
     &-text
@@ -541,11 +557,20 @@ export default {
       font-size: 16px
       line-height: 25px
       letter-spacing: $letter-spacing
+      +xs()
+        background: #ffeeee
+        margin-top: 11.6px
+        padding: 20px
+        
 
     &-bottom
       margin-top: 24px
       display: flex
       align-items: center
+      +xs()
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 21px
 
 
     &-caption
@@ -554,6 +579,9 @@ export default {
       font-size: 16px
       line-height: 19px
       letter-spacing: $letter-spacing
+      +xs()
+        width: 170px
+        flex-wrap: wrap
 
       img
         margin: 0 10px
@@ -561,6 +589,13 @@ export default {
         height: auto
         object-fit: contain
         display: block
+      
+      span:last-child
+        +xs()
+          // display: block
+          font-weight: 500
+          margin-top: 10px
+
 
 
 
@@ -568,6 +603,9 @@ export default {
       margin-left: auto
       display: flex
       align-items: center
+      +xs()
+        margin-left: 0
+        margin-top: 15px
 
 
     &-icon
@@ -594,6 +632,9 @@ export default {
         background: #ffeeee
         border: 1px solid #ffd0d0
 
+      &:first-child
+        +xs()
+          margin-left: 0
 
 
     &-skipped
@@ -610,6 +651,10 @@ export default {
       background: #f6f7ff
       border: 1px solid #e7ebff
       border-radius: 10px
+      +xs()
+        position: static
+        align-self: flex-end
+        text-align: right
 
       img
         width: 32px

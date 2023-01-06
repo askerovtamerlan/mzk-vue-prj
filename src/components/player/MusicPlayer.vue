@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="player">
     <!-- Track thumbnail -->
     <track-thumb
@@ -350,6 +350,8 @@ const toggleVolumeBar = () => {
   height: 100px
   width: 100px
   overflow: hidden
+  +xs()
+    display: none
 .player__controls
   display: grid
   gap: 20px
@@ -366,6 +368,8 @@ const toggleVolumeBar = () => {
   align-items: center
   margin-left: auto
   padding-right: 36px
+  +xs()
+    display: none
 
 .player__controls .header__btn
   display: flex
@@ -492,6 +496,8 @@ const toggleVolumeBar = () => {
 .player__controls .controls__volume
   position: relative
   height: 24px
+  +xs()
+    display: none
 .player__controls .volume-slider
   position: absolute
   bottom: 33px
